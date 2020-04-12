@@ -6,7 +6,7 @@ Build a Home Automation system to remotely control devices at home. Expose a set
 Build a web console through which one can control and manage the entire system.
 To talk to devices mimic one or more libraries that just logs the action it performed. 
 
-##Scenarios
+## Scenarios
 - List all smart devices
 - Add new smart device
 - Perform an operation on a device 
