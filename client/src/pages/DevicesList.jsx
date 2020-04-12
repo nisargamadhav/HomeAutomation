@@ -28,7 +28,7 @@ class UpdateDevice extends Component {
     }
 
     render() {
-        return <Update onClick={this.updateUser}>Update</Update>
+        return <Update onClick={this.updateUser}>Perform Action</Update>
     }
 }
 
@@ -38,7 +38,7 @@ class DeleteDevice extends Component {
 
         if (
             window.confirm(
-                `Do tou want to delete the device ${this.props.id} permanently?`,
+                `Do you want to delete the device ${this.props.id} permanently?`,
             )
         ) {
             api.deleteDeviceById(this.props.id)

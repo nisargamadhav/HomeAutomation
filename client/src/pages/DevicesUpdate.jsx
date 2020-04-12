@@ -71,7 +71,7 @@ class DevicesUpdate extends Component {
         const payload = { name, rating, time: arrayTime }
 
         await api.updateDeviceById(id, payload).then(res => {
-            window.alert(`Device updated successfully`)
+            window.alert(`Action performed successfully`)
             this.setState({
                 name: '',
                 rating: '',
@@ -95,16 +95,16 @@ class DevicesUpdate extends Component {
         const { name, rating, time } = this.state
         return (
             <Wrapper>
-                <Title>Create Device</Title>
+                <Title>Perform action on  the device {name}</Title>
 
-                <Label>Name: </Label>
+                {/*<Label>Name: </Label>
                 <InputText
                     type="text"
                     value={name}
                     onChange={this.handleChangeInputName}
                 />
 
-                {/* <Label>Rating: </Label>
+                 <Label>Rating: </Label>
                 <InputText
                     type="number"
                     step="0.1"
@@ -123,7 +123,7 @@ class DevicesUpdate extends Component {
                     onChange={this.handleChangeInputTime}
                 /> */}
 
-                <Button onClick={this.handleUpdateDevice}>Update Device</Button>
+                <Button onClick={this.handleUpdateDevice}>Perform Action</Button>
                 <CancelButton href={'/devices/list'}>Cancel</CancelButton>
             </Wrapper>
         )
